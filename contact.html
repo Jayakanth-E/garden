@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Nasree Garden</title>
+  <script>
+    function sendToWhatsApp() {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+
+      const text = `Feedback from Nasree Garden Website:
+Name: ${name}
+Email: ${email}
+Message: ${message}`;
+
+      const phoneNumber = '919585390929'; // Your WhatsApp number in international format without '+' sign
+      const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
+      window.open(url, '_blank');
+    }
+  </script>
+</head>
+<body style="margin: 0; font-family: 'Segoe UI', sans-serif; background: #f0fff0;">
+
+  <!-- Header -->
+  <header style="background-color: #004d00; color: white; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center;">
+    <div style="display: flex; align-items: center;">
+      <img src="https://cdn-icons-png.flaticon.com/512/2909/2909767.png" alt="Logo" style="width: 50px; height: 50px; margin-right: 10px;">
+      <div>
+        <h1 style="margin: 0; font-size: 24px;">Nursery Garden</h1>
+        <p style="margin: 0; font-size: 14px;">We'd love to hear from you!</p>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html" style="color: white; text-decoration: none; margin: 0 10px;">Home</a>
+      <a href="product.html" style="color: white; text-decoration: none; margin: 0 10px;">Products</a>
+      <a href="contact.html" style="color: #ffcc00; font-weight: bold; text-decoration: none; margin: 0 10px;">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Contact Section -->
+  <section style="padding: 40px; text-align: center;">
+    <h2 style="color: #004d00;">Get In Touch</h2>
+    <p>For orders, feedback, or questions, feel free to contact us through the form below or reach out on social media.</p>
+
+    <form onsubmit="sendToWhatsApp(); return false;" style="max-width: 600px; margin: 30px auto; text-align: left;">
+      <label>Name</label>
+      <input type="text" id="name" placeholder="Your Name" style="width: 100%; padding: 10px; margin: 10px 0;" required>
+      
+      <label>Email</label>
+      <input type="email" id="email" placeholder="Your Email" style="width: 100%; padding: 10px; margin: 10px 0;" required>
+      
+      <label>Feedback</label>
+      <textarea id="message" rows="5" placeholder="Your Feedback" style="width: 100%; padding: 10px; margin: 10px 0;" required></textarea>
+      
+      <button type="submit" style="background-color: #004d00; color: white; padding: 10px 20px; border: none; border-radius: 5px;">Send via WhatsApp</button>
+    </form>
+
+    <!-- Contact Info -->
+    <div style="margin-top: 30px; color: #333;">
+      <p><strong>Email:</strong> saravsvr@gmail.com</p>
+      <p><strong>Phone:</strong> +91 9585390929</p>
+      <p>
+        <strong>Follow us:</strong>
+        <a href="https://www.instagram.com/filcker_of_star?utm_source=qr&igsh=aHpuOHNuYTQ0OW90" style="margin: 0 5px; color: #004d00;">Instagram</a> 
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background-color: #004d00; color: white; text-align: center; padding: 15px;">
+    <p>&copy; 2025 Nasree Garden. Let's grow together 🌿</p>
+  </footer>
+
+</body>
+</html>
